@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def rand_perm(n:int):
-    """Returns random permutation of [0,...,n-1] using Fisher-Yates"""
+    """Returns random uniformly distributed permutation of [0,...,n-1] using Fisher-Yates"""
 
     p = []
     x = [i for i in range(n)]
@@ -10,33 +10,37 @@ def rand_perm(n:int):
         p.append(x.pop(np.random.randint(n-i)))
     return p
 
-def max_cycle_length(p):
-    """Returns the max length of cycles of p"""
+def cyc_decomp(p):
+    """Returns the cycle decomposition of a permutation p"""
 
     remaining = p.copy() #stores elements not yet in a cycle
-    cycle_lengths = [] 
+    cycles = [] 
 
     while remaining != []:
-        start = remaining[0] #sets start of new cycle
+        start = p.index(remaining[0]) #sets start of new cycle
         remaining.remove(start) #removes it from remaining
         i = start #initialise index
-        l = 1
+        c = [start]
         while p[i] != start: #repeatedly applies p to start index until it cycles back to start, recording no. of applications and removing elements from remaining as it goes.
-            l += 1
             i = p[i]
+            c.append(i)
             remaining.remove(i)
-        cycle_lengths.append(l)
+        cycles.append(c)
     
-    return max(cycle_lengths)
+    return cycles
 
-def create_hist(n, sample_size):
-        mcl = [max_cycle_length(rand_perm(n)) for i in range(sample_size)]
-        plt.hist(mcl, bins = 40)
-        plt.show()
+def max_cyc_len(p):
+    """Returns the maximal length of a cycle of a permutation p"""
+    cyc_len = [len(c) for c in cyc_decomp(p)] 
+    return(max(cyc_len))
 
-create_hist(300,1000)
+def gen_mcl_hist(n, sample_size = 10000):
+    """Generates a histogram of the maximal cycle lengths of a sample of uniformly distributed n-permutations."""
+    perms = [rand_perm(n) for i in range(sample_size)] #makes list of random permuations
+    mcls = [max_cyc_len(p) for p in perms] #calculates their max cycle length
+    freqs = {k: mcls.count(k) for k in range(1,20)} #creates a dictionary of frequencies
+    print(freqs)
+    plt.hist(mcls, bins = 20)
+    plt.show()
 
-
-p = rand_perm(8)
-print(p)       
-print(max_cycle_length(p))   
+gen_mcl_hist(40)
