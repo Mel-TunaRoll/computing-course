@@ -1,0 +1,20 @@
+[process 50831] iteration 1: x=0.1595, 429ms
+
+[process 50831] iteration 2: x=6.0700, 324ms
+
+[process 50831] iteration 3: x=0.5667, 957ms
+
+[process 50831] iteration 4: x=1.1057, 199ms
+
+[process 50831] iteration 5: x=3.3637, 888ms
+
+[process 50831] iteration 6: x=1.2787, 355ms
+
+[process 50831] iteration 7: x=0.9194, 202ms
+
+[process 50831] iteration 8: x=0.7018, 420ms
+
+[process 50831] iteration 9: x=1.4803, 66ms
+
+[process 50831] iteration 10: x=0.1336, 52ms
+

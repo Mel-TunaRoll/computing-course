@@ -40,7 +40,7 @@ def gen_mcl_hist(n, sample_size = 10000):
     mcls = [max_cyc_len(p) for p in perms] #calculates their max cycle length
     freqs = {k: mcls.count(k) for k in range(1,20)} #creates a dictionary of frequencies
     print(freqs)
-    plt.hist(mcls, bins = 20)
+    plt.bar(range(50),mcls)
     plt.show()
 
-gen_mcl_hist(40)
+gen_mcl_hist(50)

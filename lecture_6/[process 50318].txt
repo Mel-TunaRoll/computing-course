@@ -1,0 +1,16 @@
+[process 50318] iteration 1: x=1.4216, 162ms
+
+[process 50318] iteration 2: x=0.4481, 266ms
+
+[process 50318] iteration 3: x=1.5181, 563ms
+
+[process 50318] iteration 4: x=2.2818, 59ms
+
+[process 50318] iteration 5: x=0.9048, 891ms
+
+[process 50318] iteration 6: x=0.1503, 843ms
+
+[process 50318] iteration 7: x=0.6941, 425ms
+
+[process 50318] iteration 8: ERROR. Terminating.
+

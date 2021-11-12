@@ -1,0 +1,28 @@
+[process 50081] iteration 1: x=1.2311, 887ms
+
+[process 50081] iteration 2: x=0.9474, 300ms
+
+[process 50081] iteration 3: x=0.3900, 728ms
+
+[process 50081] iteration 4: x=0.6120, 237ms
+
+[process 50081] iteration 5: x=1.7727, 466ms
+
+[process 50081] iteration 6: x=0.3523, 47ms
+
+[process 50081] iteration 7: x=1.2382, 888ms
+
+[process 50081] iteration 8: x=0.1291, 541ms
+
+[process 50081] iteration 9: x=3.9213, 631ms
+
+[process 50081] iteration 10: x=1.0608, 90ms
+
+[process 50081] iteration 1: x=0.1890, 425ms
+
+[process 50081] iteration 2: x=1.0522, 718ms
+
+[process 50081] iteration 3: x=0.0888, 940ms
+
+[process 50081] iteration 4: ERROR. Terminating.
+
